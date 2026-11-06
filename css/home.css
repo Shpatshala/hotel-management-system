@@ -1,0 +1,369 @@
+.hero {
+    position: relative;
+    height: calc(100vh - 64px);
+    margin-top: 64px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(44, 62, 80, 0.5);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #E5E5E5;
+    max-width: 1000px;
+    padding: 0 10px;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    font-weight: 100;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 32px;
+    opacity: 0.90;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.p-btn {
+    font-size: medium;
+    padding: 15px 40px;
+}
+
+.search-bar-section {
+    position: relative;
+    margin-top: -100px;
+    z-index: 10;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.search-form {
+    background-color: #FAFAFA;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 12px;
+    color: #515151;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    padding: 12px;
+    transition: border-color 0.3s ease;
+}
+
+.input-wrapper:focus-within {
+    border-color: #515151;
+}
+
+.input-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+}
+
+.form-group input,
+.form-group select {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #2A2A2A;
+    background: none;
+}
+
+.form-group input::placeholder {
+    color: #515151;
+}
+
+.btn-search {
+    grid-column: 1 / -1;
+    background-color: #5F141A;
+    color: #E5E5E5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px;
+}
+
+.btn-search img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.featured-rooms {
+    padding: 80px 0;
+    background-color: #f0f0f0;
+}
+
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-top: 60px;
+}
+
+.room-card {
+    background-color: #FAFAFA;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.room-card:hover {
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+}
+
+.room-image {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.room-card:hover .room-image img {
+    transform: scale(1.08);
+}
+
+.room-rating {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: #FAFAFA;
+    padding: 8px 12px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.room-rating .star {
+    color: #DAA520;
+}
+
+.room-content {
+    padding: 24px;
+}
+
+.room-content h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2A2A2A;
+    margin-bottom: 8px;
+}
+
+.room-content > p {
+    color: #515151;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.room-specs {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E5E5E5;
+    font-size: 14px;
+    color: #515151;
+}
+
+.room-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.room-price {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.room-price .price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2A2A2A;
+}
+
+.room-price .period {
+    color: #515151;
+}
+
+.amenities {
+    padding: 80px 0;
+    background-color: #FAFAFA;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.amenity-card {
+    text-align: center;
+    padding: 32px 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background-color: #f0f0f0;
+}
+
+.amenity-card:hover {
+    background-color: #FAFAFA;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+.amenity-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 16px;
+    background-color: rgba(95, 20, 26, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amenity-icon img {
+    width: 32px;
+    height: 32px;
+}
+
+.amenity-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2A2A2A;
+    margin-bottom: 12px;
+}
+
+.amenity-card p {
+    color: #515151;
+    font-size: 14px;
+}
+.testimonials {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f5f3f0 0%, #fafafa 100%);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: 60px;
+}
+
+.testimonial-card {
+    background-color: #FAFAFA;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.stars {
+    color: #DAA520;
+    margin-bottom: 16px;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.testimonial-text {
+    color: #515151;
+    margin-bottom: 20px;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: #2A2A2A;
+}
+
+.testimonial-role {
+    font-size: 12px;
+    color: #515151;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+    .search-form {
+        padding: 20px;
+        gap: 16px;
+    }
+}
